@@ -1,0 +1,27 @@
+{
+  "name": "why-code-with-ldt",
+  "version": "0.0.1",
+  "homepage": "https://github.com/KINFOO/why-code-with-ldt",
+  "authors": [
+    "Kevin KIN-FOO <kkinfoo@sierrawireless.com>"
+  ],
+  "description": "LDT at EclipseCon France 2014",
+  "keywords": [
+    "lua",
+    "ldt",
+    "Eclipse",
+    "EclipseConFrance"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "reveal.js": "~2.6.2"
+  }
+}
