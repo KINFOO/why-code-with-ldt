@@ -1,10 +1,10 @@
-# Why code with LDT
+# Why code with LDT?
 
 # Who am I?
 
 _Kévin KIN-FOO_, working at _Sierra Wireless_.
 
-Working on __LDT__ from the beginning.
+Working on __LDT__ since 2008.
 
 # The approach
 
@@ -16,7 +16,7 @@ Working on __LDT__ from the beginning.
 
 * I am not entering this debate
 * If your read this, you are interested in IDE
-* We try to keep light
+* We try to keep it light
 * We do not aim convert editor users
 
 # LDT among IDEs
@@ -68,7 +68,9 @@ Working on __LDT__ from the beginning.
 ### Why?
 
 * It just bootstraps everything
-* We like ou Lua _flexible_
+* It enable to focus on valuable completion
+    * Minimize ackwards proposals
+* We like our Lua _flexible_
 * _Flexible_ is hard for IDEs
 
 ### Any example?
