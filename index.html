@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Why code with LDT?</title>
+
+		<meta name="description" content="LDT at EclipseCon France 2014">
+		<meta name="author" content="Kevin KIN-FOO">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="bower_components/reveal.js/css/reveal.min.css">
+		<link rel="stylesheet" href="bower_components/reveal.js/css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="bower_components/reveal.js/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+<section id="why-code-with-ldt" class="slide level1">
+<h1>Why code with LDT?</h1>
+</section>
+<section id="who-am-i" class="slide level1">
+<h1>Who am I?</h1>
+<p><em>Kévin KIN-FOO</em>, working at <em>Sierra Wireless</em>.</p>
+<p>Working on <strong>LDT</strong> since 2009.</p>
+</section>
+<section id="the-approach" class="slide level1">
+  <section>
+<h1>The approach</h1>
+<ul>
+<li>IDE or Editor</li>
+<li>LDT among IDEs</li>
+<li>What does it offer</li>
+</ul>
+</section>
+<section id="ide-or-editor" class="slide level1">
+<h1>IDE or Editor</h1>
+<ul>
+<li>I am not entering this debate</li>
+<li>If your read this, you are interested in IDE</li>
+<li>We try to keep it light</li>
+<li>We do not aim convert editor users</li>
+</ul>
+</section>
+<section id="ldt-among-ides" class="slide level1">
+<h1>LDT among IDEs</h1>
+<ul>
+<li>I am not entering this either</li>
+<li>This talk is not about comparison</li>
+<li>It is about explaining how we do things</li>
+</ul>
+</section>
+  </section>
+<section id="the-real-approach" class="slide level1">
+<h1>The real approach</h1>
+<ul>
+<li><strike>IDE or Editor</li>
+<li>LDT among IDEs</strike></li>
+<li>What does it offer</li>
+</ul>
+</section>
+<section id="what-does-it-offer" class="slide level1">
+<h1>What does it offer</h1>
+<ul>
+<li>Formatting</li>
+<li>Navigation</li>
+<li>Assistance</li>
+<li>Debug</li>
+<li>Eclipse integration</li>
+</ul>
+</section>
+<section id="formatting" class="slide level1">
+  <section>
+<h1>Formatting</h1>
+<ul>
+<li>It is simply an indenter
+<ul>
+<li>It is configurable</li>
+</ul></li>
+<li>It is available as <a href="https://github.com/LuaDevelopmentTools/luaformatter">single project</a>
+<ul>
+<li>It is a <em>rock</em></li>
+</ul></li>
+</ul>
+</section>
+<section>
+<h1>Formatting</h1>
+<ul>
+<li>Formatter settings can be attached to a project
+<ul>
+<li>Everybody working on a project uses the good one</li>
+</ul></li>
+<li>Eases collaborative work</li>
+</ul>
+</section>
+ </section>
+<section id="navigation" class="slide level1">
+<h1>Navigation</h1>
+<ul>
+<li>It is possible to navigate in a project more easily
+<ul>
+<li>Local variables declaration</li>
+<li>Functions declaration</li>
+<li>Table fields declaration</li>
+</ul></li>
+</ul>
+</section>
+<section id="assistance" class="slide level1">
+  <section>
+<h1>Assistance</h1>
+<ul>
+<li>Introducing a type system</li>
+<li>Integrating documentation</li>
+<li>Embracing environments</li>
+</ul>
+</section>
+<section id="assistance-1" class="slide level1">
+<h1>Assistance</h1>
+<h2 id="type-system">Type system</h2>
+<ul>
+<li>Why?</li>
+<li>Any example?</li>
+<li>How is it done?</li>
+</ul>
+</section>
+<section id="assistance-2" class="slide level1">
+<h1>Assistance</h1>
+<h2 id="type-system-1">Type system</h2>
+<h3 id="why">Why?</h3>
+<ul>
+<li>It just bootstraps everything</li>
+<li>It enable to focus on valuable completion
+<ul>
+<li>Minimize ackwards proposals</li>
+</ul></li>
+<li>We like our Lua <em>flexible</em></li>
+<li><em>Flexible</em> is hard for IDEs</li>
+</ul>
+</section>
+<section id="assistance-3" class="slide level1">
+<h1>Assistance</h1>
+<h2 id="type-system-2">Type system</h2>
+<h3 id="any-example">Any example?</h3>
+<ul>
+<li>I have two of them:
+<ul>
+<li><em>functions</em>
+<ul>
+<li>What do they return?</li>
+</ul></li>
+<li><em>tables</em>
+<ul>
+<li>Which field is code assistance worthy?</li>
+<li>What is the type or their fields?</li></ul>
+</section>
+<section id="assistance-4" class="slide level1">
+<h1>Assistance</h1>
+<h2 id="type-system-3">Type system</h2>
+<h3 id="any-example-1">Any example?</h3>
+<pre><code>colorer = function(x)
+  local t = def(x)
+  t.color = &#39;#ddd&#39;
+  return t
+end
+
+-- So now, what&#39;s a good completion proposal?
+local colored = colorer( somevalue )</code></pre>
+</section>
+<section id="assistance-5" class="slide level1">
+<h1>Assistance</h1>
+<h2 id="type-system-4">Type system</h2>
+<h3 id="how-is-it-done">How is it done?</h3>
+<ul>
+<li><a href="http://wiki.eclipse.org/Koneki/LDT/User_Area/Documentation_Language">Documentation language</a></li>
+<li>Comment prefixed annotations</li>
+<li>Inference</li>
+<li><strong>Indeed</strong>: compatible with all Lua 5.1 interpreters</li>
+</ul>
+</section>
+<section id="assistance-6" class="slide level1">
+<h1>Assistance</h1>
+<h2 id="type-system-5">Type system</h2>
+<h3 id="how-it-is-done-sample">How it is done: sample</h3>
+<pre><code>---
+-- @type coloredtable
+-- @field #string result
+
+--- @return #coloredtable
+colorer = function(x)
+  local t = def(x)
+  t.color = &#39;#ddd&#39;
+  return t
+end
+
+-- Now we know
+local colored = colorer( somevalue )</code></pre>
+</section>
+<section id="assistance-7" class="slide level1">
+<h1>Assistance</h1>
+<h2 id="type-system-6">Type system</h2>
+<h3 id="how-is-it-done-another-sample">How is it done: another sample</h3>
+<pre><code>---
+-- @type coloredtable
+-- @field #string result
+
+colorer = function(x)
+  local t = def(x)
+  t.color = &#39;#ddd&#39;
+  return t
+end
+
+local colored = colorer( somevalue ) -- #coloredtable</code></pre>
+</section>
+<section id="assistance-8" class="slide level1">
+<h1>Assistance</h1>
+<h2 id="type-system-7">Type system</h2>
+<h3 id="integrating-documentation">Integrating documentation</h3>
+<ul>
+<li>Describes your code
+<ul>
+<li>In a way both humans <em>and</em> computers can understand</li>
+</ul></li>
+<li>Can describe:
+<ul>
+<li>Modules</li>
+<li>Libraries</li>
+<li>Environments</li>
+</ul></li>
+</ul>
+</section>
+<section id="assistance-9" class="slide level1">
+<h1>Assistance</h1>
+<h2 id="type-system-8">Type system</h2>
+<h3 id="integrating-documentation-1">Integrating documentation</h3>
+<h4 id="environments">Environments?</h4>
+<ul>
+<li>We came with the concept of <a href="http://wiki.eclipse.org/Koneki/LDT/User_Area/Execution_Environment_file_format#Execution_Environment">Execution Environment</a> (EE)
+<ul>
+<li>It is the description of your application <strong>runtime</strong></li>
+</ul></li>
+<li>Convenient for:
+<ul>
+<li><em>Third party</em>: No need to deliver source code</li>
+<li><em>Frameworks</em>: Explain how and why of some specifics</li>
+<li><em>C</em>: When commented right, you have completion on it</li>
+</ul></li>
+</ul>
+</section>
+<section id="assistance-10" class="slide level1">
+<h1>Assistance</h1>
+<h2 id="type-system-9">Type system</h2>
+<h3 id="integrating-documentation-2">Integrating documentation</h3>
+<h4 id="it-is-open">It is open</h4>
+<ul>
+<li><a href="https://github.com/LuaDevelopmentTools/luadocumentor">LuaDocumentor</a>, our documentation generator is
+<ul>
+<li>A single project</li>
+<li>Available from command line</li>
+</ul></li>
+<li>You can <a href="http://wiki.eclipse.org/Koneki/LDT/User_Area/Execution_Environment_file_format">write your own EE</a>
+<ul>
+<li>You can attach it to your project</li>
+</ul></li>
+</ul>
+</section>
+  </section>
+<section id="debug" class="slide level1">
+<section>
+<h1>Debug</h1>
+<ul>
+<li>Available out of the box</li>
+<li>Configurable
+<ul>
+<li>It is possible to have custom <a href="http://wiki.eclipse.org/Koneki/LDT/User_Area/Debugger/ValueDisplay">display for a type</a></li>
+<li>It possible to <a href="http://wiki.eclipse.org/Koneki/LDT/Developer_Area/User_Guides/User_Guide_1.1#Improve_cdata_display">display CDATA</a> content (LuaJIT FFI)</li>
+</ul></li>
+</ul>
+</section>
+<section>
+<h1>Debug</h1>
+<p>Demo</p>
+</section>
+</section>
+<section id="eclipse-integration" class="slide level1">
+<section>
+<h1>Eclipse integration</h1>
+<p>You can benefit from many Eclipse projects form LDT:</p>
+<ul>
+<li>EGit</li>
+<li>Mylyn</li>
+<li>CDT</li>
+<li>…</li>
+</ul>
+</section>
+<section id="eclipse-integration-1" class="slide level1">
+<h1>Eclipse integration</h1>
+<p>LDT &amp; CDT?</p>
+</section>
+<section id="eclipse-integration-2" class="slide level1">
+<h1>Eclipse integration</h1>
+<p>Demo</p>
+</section>
+</section>
+<section id="would-you-use-ldt" class="slide level1">
+<section>
+<h1>Would you use LDT?</h1>
+<p>Questions?</p>
+</section>
+<section id="merci" class="slide level1">
+<h1>Merci</h1>
+</section>
+</section>
+</div>
+
+		</div>
+
+		<script src="bower_components/reveal.js/lib/js/head.min.js"></script>
+		<script src="bower_components/reveal.js/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
