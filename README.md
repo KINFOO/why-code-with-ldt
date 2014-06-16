@@ -27,43 +27,49 @@ Working on __LDT__ since 2008.
 
 # What does it offer
 
-* Code formatting
-* Code navigation
-* Code assistance
+* Formatting
+* Navigation
+* Assistance
 * Debug
 * Eclipse integration
 
-# Code formatting
+# Formatting
 
 * It is simply an indenter
     * It is configurable
 * It is available as [single project](https://github.com/LuaDevelopmentTools/luaformatter)
     * It is a _rock_
 
-# Code formatting
+# Formatting
 
 * Formatter settings can be attached to a project
     * Everybody working on a project uses the good one
 * Eases collaborative work
 
-# Code navigation
+# Navigation
 
 * It is possible to navigate in a project more easily
     * Local variables declaration
     * Functions declaration
     * Table fields declaration
 
-# Code assistance
+# Assistance
 
 * Introducing a type system
 * Integrating documentation
 * Embracing environments
+
+# Assistance
 
 ## Type system
 
 * Why?
 * Any example?
 * How is it done?
+
+# Assistance
+
+## Type system
 
 ### Why?
 
@@ -73,6 +79,10 @@ Working on __LDT__ since 2008.
 * We like our Lua _flexible_
 * _Flexible_ is hard for IDEs
 
+# Assistance
+
+## Type system
+
 ### Any example?
 
 * I have two of them:
@@ -81,6 +91,10 @@ Working on __LDT__ since 2008.
     * _tables_
         * What is the type or their fields?
         * Whick field is code assistance worthy?
+
+# Assistance
+
+## Type system
 
 ### Any example?
 
@@ -95,12 +109,20 @@ Working on __LDT__ since 2008.
     local hash = func( somevalue )
     hash.
 
+# Assistance
+
+## Type system
+
 ### How is it done?
 
 * [Documentation language](http://wiki.eclipse.org/Koneki/LDT/User_Area/Documentation_Language)
 * Comment prefixed annotations
 * Inference
 * __Indeed__: compatible with all Lua 5.1 interpreters
+
+# Assistance
+
+## Type system
 
 ### How it is done: sample
 
@@ -119,6 +141,10 @@ Working on __LDT__ since 2008.
     local hash = func( somevalue )
     if not hash then error('Meaningful message') end
 
+# Assistance
+
+## Type system
+
 ### How is it done: shorter sample
 
     ---
@@ -136,6 +162,10 @@ Working on __LDT__ since 2008.
     local hash = func( somevalue ) -- #resulttable
     if not hash then error('Meaningful message') end
 
+# Assistance
+
+## Type system
+
 ### Integrating documentation
 
 * Describes your code
@@ -145,6 +175,12 @@ Working on __LDT__ since 2008.
     * Libraries
     * Environments
 
+# Assistance
+
+## Type system
+
+### Integrating documentation
+
 #### Enivonments?
 
 * We came with the concept of [Execution Environment]() (EE)
@@ -153,6 +189,12 @@ Working on __LDT__ since 2008.
     * _Third party_: No need to deliver source code
     * _Frameworks_: Explain how and why of some specifics
     * _C_: When commented right, you have completion on it
+
+# Assistance
+
+## Type system
+
+### Integrating documentation
 
 #### It is open
 
