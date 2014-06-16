@@ -4,7 +4,7 @@
 
 _Kévin KIN-FOO_, working at _Sierra Wireless_.
 
-Working on __LDT__ since 2008.
+Working on __LDT__ since 2009.
 
 # The approach
 
@@ -24,6 +24,15 @@ Working on __LDT__ since 2008.
 * I am not entering this either
 * This talk is not about comparison
 * It is about explaining how we do things
+
+
+
+# The real approach
+
+* <strike>IDE or Editor
+* LDT among IDEs</strike>
+* What does it offer
+
 
 # What does it offer
 
@@ -89,8 +98,8 @@ Working on __LDT__ since 2008.
     * _functions_
         * What do they return?
     * _tables_
+        * Which field is code assistance worthy?
         * What is the type or their fields?
-        * Whick field is code assistance worthy?
 
 # Assistance
 
@@ -98,16 +107,14 @@ Working on __LDT__ since 2008.
 
 ### Any example?
 
-    func = function(x)
-      if x then
-        return { result = 'yeah!' }
-      end
-      return nil, 'No `x` provided.'
+    colorer = function(x)
+      local t = def(x)
+      t.color = '#ddd'
+      return t
     end
 
     -- So now, what's a good completion proposal?
-    local hash = func( somevalue )
-    hash.
+    local colored = colorer( somevalue )
 
 # Assistance
 
@@ -127,40 +134,36 @@ Working on __LDT__ since 2008.
 ### How it is done: sample
 
     ---
-    -- @type resulttable
+    -- @type coloredtable
     -- @field #string result
     
-    --- @return #resulttable
-    func = function(x)
-      if x then
-        return { result = 'yeah!' }
-      end
-      return nil, 'No `x` provided.'
+    --- @return #coloredtable
+    colorer = function(x)
+      local t = def(x)
+      t.color = '#ddd'
+      return t
     end
-    
-    local hash = func( somevalue )
-    if not hash then error('Meaningful message') end
+
+    -- Now we know
+    local colored = colorer( somevalue )
 
 # Assistance
 
 ## Type system
 
-### How is it done: shorter sample
+### How is it done: another sample
 
     ---
-    -- @type resulttable
+    -- @type coloredtable
     -- @field #string result
     
-    func = function(x)
-      if x then
-        return { result = 'yeah!' }
-      end
-      return nil, 'No `x` provided.'
+    colorer = function(x)
+      local t = def(x)
+      t.color = '#ddd'
+      return t
     end
     
-    -- Indicating type
-    local hash = func( somevalue ) -- #resulttable
-    if not hash then error('Meaningful message') end
+    local colored = colorer( somevalue ) -- #coloredtable
 
 # Assistance
 
@@ -181,9 +184,9 @@ Working on __LDT__ since 2008.
 
 ### Integrating documentation
 
-#### Enivonments?
+#### Environments?
 
-* We came with the concept of [Execution Environment]() (EE)
+* We came with the concept of [Execution Environment](http://wiki.eclipse.org/Koneki/LDT/User_Area/Execution_Environment_file_format#Execution_Environment) (EE)
     * It is the description of your application __runtime__
 * Convenient for:
     * _Third party_: No need to deliver source code
@@ -198,7 +201,7 @@ Working on __LDT__ since 2008.
 
 #### It is open
 
-* [LuaDocumentor](https://github.com/LuaDevelopmentTools/luadocumentor), our documentation genertator is
+* [LuaDocumentor](https://github.com/LuaDevelopmentTools/luadocumentor), our documentation generator is
     * A single project
     * Available from command line
 * You can [write your own EE](http://wiki.eclipse.org/Koneki/LDT/User_Area/Execution_Environment_file_format)
