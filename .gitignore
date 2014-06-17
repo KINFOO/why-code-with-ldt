@@ -1,3 +1,5 @@
 bower_components
 presentation
 .DS_Store
+sample/.metadata
+sample/example/build

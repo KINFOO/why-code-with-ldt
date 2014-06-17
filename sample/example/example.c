@@ -20,23 +20,23 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
-#include "lua5.1/lua.h"
-#include "lua5.1/lauxlib.h"
-#include "lua5.1/lualib.h"
+#include <lua.h>
+#include <lauxlib.h>
+#include <lualib.h>
 
 #include <string.h>
 #include <stdlib.h>
 
-static int c_hello(lua_State *L) {
+static int hello_function(lua_State *L) {
 		printf("Hello");
 		return 0;
 }
 
-static const struct luaL_Reg c_modulefuncs[] = { { "hello", c_hello}, {
+static const struct luaL_Reg c_modulefuncs[] = { { "hello", hello_function}, {
 NULL, NULL } };
 
-int luaopen_c(lua_State *L) {
+int luaopen_example(lua_State *L) {
 	// Register module functions.
-	luaL_register(L, "c", c_modulefuncs);
+	luaL_register(L, "example", c_modulefuncs);
 	return 1;
 }

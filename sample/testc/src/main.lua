@@ -1,6 +1,6 @@
-local c = require "c"
+local lib = require "example"
 
 local function main()
-  c.hello();
+ lib.hello();
 end
 main()
