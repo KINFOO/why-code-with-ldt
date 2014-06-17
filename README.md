@@ -216,7 +216,11 @@ Working on __LDT__ since 2009.
 
 # Debug
 
-Demo
+* Demo
+    * Out of the box
+    * Formatter
+    * Locals & globals
+    * LuaJIT
 
 # Eclipse integration
 
@@ -226,14 +230,6 @@ You can benefit from many Eclipse projects form LDT:
 * Mylyn
 * CDT
 * …
-
-# Eclipse integration
-
-LDT & CDT?
-
-# Eclipse integration
-
-Demo
 
 # Would you use LDT?
 
